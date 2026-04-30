@@ -6,8 +6,11 @@
   "RepoUrl": "https://github.com/Grammernatzi/XIVComboPluginExpandedest",
   "IconUrl": "https://raw.githubusercontent.com/grammernatzi/XIVComboPluginExpandedest/master/res/icon.png",
   "ImageUrls": [],
-  "DalamudApiLevel": 14,
-  "Changelog": "1.5.0.91: 
+  "DalamudApiLevel": 15,
+  "Changelog": "1.5.0.92: 
+    * Updated to 7.5.
+    
+    1.5.0.91: 
     * Removed Burst Strike/Fated Circle to Bloodfest as you now cannot overcap with Bloodfest.
     * Added Bloodfest to No Mercy.
     * Fixed a bug where Blizzard/Fire switcher did not work without Enochian unlocked.

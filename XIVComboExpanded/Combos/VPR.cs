@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -131,7 +131,7 @@ namespace XIVComboExpandedestPlugin.Combos
         {
             if (IsEnabled(CustomComboPreset.ViperBloodFangFeature) && OriginalHook(VPR.Twinblood) == VPR.UncoiledTwinblood)
                 return actionID;
-            if (!InMeleeRange() || CurrentTarget?.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Player)
+            if (!InMeleeRange() || CurrentTarget?.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Pc)
                 return VPR.Slither;
 
             return actionID;

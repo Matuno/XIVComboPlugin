@@ -235,7 +235,7 @@ namespace XIVComboExpandedestPlugin.Combos
             if (actionID == SAM.TsubameGaeshi)
             {
                 var gauge = GetJobGauge<SAMGauge>();
-                if ((gauge.Kaeshi != Kaeshi.None && gauge.Kaeshi != Kaeshi.Namikiri) && IsEnabled(CustomComboPreset.SamuraiShohaBetweenOption))
+                if ((gauge.Kaeshi != 0 && gauge.Kaeshi != Kaeshi.Namikiri) && IsEnabled(CustomComboPreset.SamuraiShohaBetweenOption))
                     return actionID;
                 if (level >= SAM.Levels.Shoha && gauge.MeditationStacks >= 3 && (GCDClipCheck() || OriginalHook(SAM.TsubameGaeshi) == SAM.TsubameGaeshi || IsEnabled(CustomComboPreset.SamuraiShohaGCDOption)))
                 {
@@ -256,7 +256,7 @@ namespace XIVComboExpandedestPlugin.Combos
             if (actionID == SAM.Iaijutsu)
             {
                 var gauge = GetJobGauge<SAMGauge>();
-                if ((gauge.Kaeshi != Kaeshi.None && gauge.Kaeshi != Kaeshi.Namikiri) && IsEnabled(CustomComboPreset.SamuraiShohaBetweenOption))
+                if ((gauge.Kaeshi != 0 && gauge.Kaeshi != Kaeshi.Namikiri) && IsEnabled(CustomComboPreset.SamuraiShohaBetweenOption))
                     return actionID;
                 if (level >= SAM.Levels.Shoha && gauge.MeditationStacks >= 3 && (GCDClipCheck() || OriginalHook(SAM.TsubameGaeshi) == SAM.TsubameGaeshi || IsEnabled(CustomComboPreset.SamuraiShohaGCDOption)))
                 {
@@ -277,7 +277,7 @@ namespace XIVComboExpandedestPlugin.Combos
             if (actionID == SAM.OgiNamikiri)
             {
                 var gauge = GetJobGauge<SAMGauge>();
-                if (gauge.Kaeshi != Kaeshi.None && IsEnabled(CustomComboPreset.SamuraiShohaBetweenOption))
+                if (gauge.Kaeshi != 0 && IsEnabled(CustomComboPreset.SamuraiShohaBetweenOption))
                     return actionID;
                 if (level >= SAM.Levels.Shoha && gauge.MeditationStacks >= 3 && (GCDClipCheck() || OriginalHook(SAM.OgiNamikiri) == SAM.OgiNamikiri || IsEnabled(CustomComboPreset.SamuraiShohaGCDOption)))
                 {

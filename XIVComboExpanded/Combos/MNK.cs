@@ -156,7 +156,7 @@ namespace XIVComboExpandedestPlugin.Combos
         {
             var gauge = GetJobGauge<MNKGauge>();
 
-            if ((!InMeleeRange() || CurrentTarget?.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Player) && CanUseAction(MNK.Thunderclap) && IsEnabled(CustomComboPreset.MonkDragonClapFeature))
+            if ((!InMeleeRange() || CurrentTarget?.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Pc) && CanUseAction(MNK.Thunderclap) && IsEnabled(CustomComboPreset.MonkDragonClapFeature))
                 return MNK.Thunderclap;
 
             if (IsEnabled(CustomComboPreset.MonkDragonKickBalanceFeature) && !gauge.BeastChakra.Contains(BeastChakra.None) && CanUseAction(OriginalHook(MNK.MasterfulBlitz)))
@@ -191,7 +191,7 @@ namespace XIVComboExpandedestPlugin.Combos
 
         protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
         {
-            if ((!InMeleeRange() || CurrentTarget?.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Player) && CanUseAction(MNK.Thunderclap))
+            if ((!InMeleeRange() || CurrentTarget?.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Pc) && CanUseAction(MNK.Thunderclap))
                 return MNK.Thunderclap;
 
             return actionID;
@@ -208,7 +208,7 @@ namespace XIVComboExpandedestPlugin.Combos
             {
                 var gauge = GetJobGauge<MNKGauge>();
 
-                if (IsEnabled(CustomComboPreset.MonkDragonClapFeature) && (!InMeleeRange() || CurrentTarget?.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Player) && CanUseAction(MNK.Thunderclap))
+                if (IsEnabled(CustomComboPreset.MonkDragonClapFeature) && (!InMeleeRange() || CurrentTarget?.ObjectKind == Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Pc) && CanUseAction(MNK.Thunderclap))
                     return MNK.Thunderclap;
 
                 if (IsEnabled(CustomComboPreset.MonkDragonKickBalanceFeature))
